@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import { memo } from 'react'
 
 import { getImageUrl } from 'helpers'
@@ -26,7 +27,7 @@ const ComicCardInformations: React.FC<IComicProps> = ({ comic }) => {
               <h6 className="card-text mb-4">{`#${comic.id}`}</h6>
             </div>
             <div className="col pb-3">
-              <h5>{comic.description}</h5>
+              <div dangerouslySetInnerHTML={{ __html: comic.description }} />
             </div>
             <div className="col pb-3">
               <h5>{comic.variantDescription}</h5>

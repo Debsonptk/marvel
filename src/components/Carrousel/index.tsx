@@ -2,6 +2,8 @@ import { memo } from 'react'
 
 import { Carousel } from 'react-bootstrap'
 
+import { CarouselStyle } from './styles'
+
 interface ICarouselProps {
   items: {
     image: string
@@ -21,8 +23,10 @@ const Carolsel: React.FC<ICarouselProps> = ({ items }) => (
           alt={item.title}
         />
         <Carousel.Caption>
-          <h3>{item.title}</h3>
-          {item.subTitle && <p>{item.subTitle}</p>}
+          <CarouselStyle>
+            <h3>{item.title}</h3>
+            {item.subTitle && <p>{item.subTitle}</p>}
+          </CarouselStyle>
         </Carousel.Caption>
       </Carousel.Item>
     ))}
