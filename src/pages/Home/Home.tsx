@@ -1,7 +1,9 @@
 import { memo, useCallback, useEffect } from 'react'
 
-import { Col, Container, Row, Spinner } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
+import Lottie from 'react-lottie'
 
+import animationData from 'assets/animation/loading-spider.json'
 import ironman from 'assets/ironman.jpeg'
 import spider from 'assets/spider.jpeg'
 import thor from 'assets/thor.jpeg'
@@ -66,7 +68,15 @@ const Home: React.FC = () => {
 
         {isLoading && (
           <div className="text-center pt-5">
-            <Spinner animation="border" variant="primary" />
+            <Lottie
+              options={{
+                animationData,
+                autoplay: true,
+                loop: true,
+              }}
+              height={450}
+              width={450}
+            />
           </div>
         )}
         {!isLoading && (

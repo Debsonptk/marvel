@@ -1,7 +1,10 @@
 import { memo, useCallback, useEffect, useState } from 'react'
 
-import { Container, Spinner } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import Lottie from 'react-lottie'
 import { useParams } from 'react-router-dom'
+
+import animationData from 'assets/animation/loading-ironman.json'
 
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
@@ -55,7 +58,15 @@ const Comic: React.FC = () => {
         </div>
         {isLoading && (
           <div className="text-center pt-5">
-            <Spinner animation="border" variant="primary" />
+            <Lottie
+              options={{
+                animationData,
+                autoplay: true,
+                loop: true,
+              }}
+              height={400}
+              width={400}
+            />
           </div>
         )}
         {!isLoading && (
