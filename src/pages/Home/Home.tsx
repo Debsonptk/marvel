@@ -4,9 +4,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Lottie from 'react-lottie'
 
 import animationData from 'assets/animation/loading-spider.json'
+import avengers from 'assets/banneravengers.png'
 import ironman from 'assets/ironman.jpeg'
 import spider from 'assets/spider.jpeg'
-import thor from 'assets/thor.jpeg'
 
 import { useCharacters } from 'context/CharactersContext'
 
@@ -32,8 +32,9 @@ const carouselItems = [
     subTitle: 'Died For Us',
   },
   {
-    image: thor,
-    title: 'Thor',
+    image: avengers,
+    title: 'Avengers',
+    subTitle: 'MCU',
   },
 ]
 
