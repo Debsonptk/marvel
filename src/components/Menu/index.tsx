@@ -1,6 +1,7 @@
 import { memo } from 'react'
 
 import { Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import logo1 from 'assets/logo1.png'
 
@@ -14,9 +15,9 @@ const Menu: React.FC<IMenuProps> = ({ handleSearch }) => (
   <>
     <div className="bg-dark border-bottom">
       <Container>
-        <div className="d-flex justify-content-center">
+        <Link to="/" className="d-flex justify-content-center">
           <img src={logo1} alt="logo" className="img-fluid" />
-        </div>
+        </Link>
       </Container>
     </div>
     <NavegationMenu handleSearch={handleSearch} />
